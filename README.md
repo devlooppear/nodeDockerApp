@@ -11,13 +11,13 @@ The project follows a standard Node.js application setup, providing a solid foun
 1. **Initialize your Node.js app in a Docker container:**
 
     ```bash
-    docker run -it -w /usr/src/app -v "$(pwd):/usr/src/app" node:16 npm init -y
+    docker run -it -w /usr/src/app -v "$(pwd):/usr/src/app" node:20 npm init -y
     ```
 
 2. **For Linux users, create an alias for npm:**
 
     ```bash
-    alias npm='docker run -it -w /usr/src/app -v "$(pwd):/usr/src/app" node:16'
+    alias npm='docker exec -it <id-of-your-image-created> npm'
     ```
 
 3. **Run the containers:**
